@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="@my_coder">
+    <title>简单，好用的团队协作工具-tower</title>
+    <style type="text/css">
+    div
+    {
+        display: block;
+    }
+    div#page-home.page
+    {
+        width: 1349px;
+        height: 2154px;
+    }
+    div.header
+    {
+        background-color: #E6E6FA;
+        position: fixed;
+        width: 1349px;
+        height: 64px;
+        box-shadow: 0px 3px 3px rgba(0,0,0,0.1);
+        line-height: 1.5;
+        z-index: 10;
+        opacity: 0.9;
+        background-color: rgb(255, 255, 255);
+    }
+    div.inr
+    {
+        width: 960px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+    }
+    div#intro.section
+    {
+        height: 410px;
+        width: 100%;
+        padding-top: 130px;
+        background-size: cover;
+        background-image: url(assets/home_intro_bg-68ba4e08678266276e40796d73559069.jpg);
+        line-height: 1.5;
+    }
+    div.desc
+    {
+        float: left;
+        width: 400px;
+        height: 215px;
+        margin-top: 70px;
+    }
+    div.video
+    {
+        margin-left: 420px;
+        font-family: "Helvetica Neue", Helvetica, Arial;
+    }
+    div#features.section
+    {
+        padding: 40px 0;
+        height: 31px;
+        background: #438079;
+    }
+    div#customer.section
+    {
+        padding: 40px 0;
+        background: #e3e5cf;
+        height: 468px;
+        vertical-align: baseline;
+        font-size: 16px;
+    }
+    a.video-preview
+    {
+        width: 565px;
+        height: 384px;
+        position: relative;
+        color: #4298ba;
+       display: block; 
+    }
+    a.video-preview:hover
+    {
+        color: #0f769f;
+        text-decoration: underline;
+    }
+    a.video-preview img:hover
+    { 
+        opacity: 1;
+    }
+    a
+    {
+        text-decoration: none;
+        color: #57786f;
+        
+    }
+    .btn-play
+    {
+        background-image: url(assets/home-img-sprite-d2a8e85a251fe8dd8c901705baad1287.png);
+        background-repeat: no-repeat;
+        background-size: 800px auto;
+        background-position: -300px 0px;
+        font-size: 100%;
+        position: absolute;
+        top: 46%;
+        left: 50%;
+        width: 91px;
+        height: 89px;
+        margin: -45px 0 0 -45px;
+        opacity: 0.6;
+    }
+    a.video-preview:hover .btn-play
+    {
+      opacity: 1;
+    }
+    a:hover
+    {
+        color: #57786f;
+        display: block;
+    }
+    a.one
+    {
+        color: white;
+        font-family: arial, sans-serif;
+        font-weight: bold;
+    }
+    a.one:hover
+    {
+        opacity: 1;
+    }
+    .logo a
+    {
+        background-repeat: no-repeat;
+        display: block;
+        position: absolute;
+        top: 18px;
+        font-size: 30px;
+        width: 95px;
+        background-image: url(assets/home-img-sprite-d2a8e85a251fe8dd8c901705baad1287.png);
+        height: 30px;
+        padding: 12px 0px 12px 0px;
+    }
+    .home, .tour, .plans, .customers, .mobile, .help, .signup, .signin
+    {
+        display: block;
+    }
+    .home, .plans, .customers, .mobile, .help
+    {
+        color: #57786f;
+        position: absolute;
+    }
+    .nav
+    {
+        padding-left: 20cm;
+        width: 900px;
+        height: 34px;
+        display: inline;
+        float: right;
+    }
+    .home
+    {
+        top: 25px;
+        left: 410px;
+    }
+    .tour
+    {
+        color: #E6E6FA;
+        position: absolute;
+        top: 25px;
+        left: 480px;
+    }
+    .plans
+    {
+        top: 25px;
+        left: 580px;
+    }
+    .customers
+    {
+        top: 25px;
+        left: 660px;
+    }
+    .mobile
+    {
+        top: 25px;
+        left: 760px;
+    }
+    .help
+    {
+        top: 25px;
+        left: 840px;
+    }
+    .signup, .signin
+    {
+        position: absolute;
+        top: 15px;
+        border-radius: 5px;
+        padding: 7px 15px;
+    }
+    .signup
+    {
+        left: 980px;
+        background: #aad200;
+    }
+    .signin
+    {
+        left: 1090px;
+        background: #a7bbb6;
+    }
+    .desc
+    {
+        width: 400px;
+        height: 48px;
+        color: white;
+    }
+    p.text
+    {
+        position: absolute;
+        top: 55px;
+    }
+    h1
+    {
+        color: white;
+    }
+    img.one
+    {
+        opacity: 1;
+        width: 1364px;
+        height: 500px;
+        position: absolute;
+        background: #022b47;
+    }
+    .desc h1, h2
+    {
+        display: block;
+        font-family: "helvetica neue", helvetica, arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft Yahei", "SimHei", Sans-serif;
+        margin: 0;
+        text-align: left;
+    }
+    .desc h1
+    {
+        font-weight: bold;
+        font-size: 32px;
+        color: #fff;
+        height: 48px;
+    }
+    .desc h2
+    {
+        font-size: 18px;
+        height: 54px;
+        color: #ccc;
+    }
+    .desc a.sightto
+    {
+        background-image: url(assets/home-img-sprite-d2a8e85a251fe8dd8c901705baad1287.png);
+        display: block;
+        float: left;
+        width: 340px;
+        height: 83px;
+        margin: 30px 0 0 -7px;
+        text-align: center;
+        line-height: 78px;
+        color: #fff;
+        font-weight: 800;
+        font-size: 22px;
+        text-shadow: 0px -1px 0px rgba(0,0,0,0.3);
+        background-repeat: no-repeat;
+        background-size: 800px auto;
+        background-position: -2px -102px;
+        opacity: 0.9;
+    }
+    .desc a.sightto:hover
+    {
+        opacity: 1;
+        z-index: -3;
+    }
+    a.featrue1
+    {
+        display: block;
+        float: left;
+        width: 140px;
+        line-height: 30px;
+        font-weight: bold;
+        color: white;
+    }
+    i
+    {
+        display: block;
+        float: left;
+        width: 30px;
+        height: 30px;
+        padding-right: 5px;
+        background-image: url(assets/home-img-sprite-d2a8e85a251fe8dd8c901705baad1287.png);
+    }
+    i.one
+    {
+        background-position: 3px -198px;
+    }
+    i.two
+    {
+        background-position: -46px -198px;
+    }
+    i.three
+    {
+        background-position: -96px -198px;
+    }
+    i.forth
+    {
+        background-position: -144px -198px;
+    }
+    i.fife
+    {
+        background-position: -197px -198px;
+    }
+    i.six
+    {
+        background-position: -246px -198px;
+    }
+    a.tour-link
+    {
+        display: block;
+        float: right;
+        padding: 5px 10px;
+        font-size: 14px;
+        font-weight: bold;
+        background: #659995;
+        color: #fff;
+    }
+    .section .inr h3, #customer h3 em
+    {
+        font-style: normal;
+        font-weight: bold;
+        color: rgb(69, 107, 106);
+        font-family: 'helvetica neue', helvetica, arial, 'Hiragino Sans GB', 'Hiragino Sans GB W3', 'Microsoft Yahei', SimHei, sans-serif;
+    }
+    .section .inr h3
+    {
+        font-size: 32px;
+        margin: 0;
+    }
+    #customer h3 em
+    {
+        font-size: 50px;
+    }
+    .customers-link a
+    {
+        display: block;
+        width: 300px;
+        margin: 30px auto;
+        padding: 19px 20px;
+        text-align: center;
+        background: #B6BC74;
+        color: white;
+        font-size: 22px;
+        font-weight: bold;
+        border-radius: 4px;
+        text-decoration: none;
+    }
+    .customers-link a:hover
+    {
+        opacity: 0.8;
+    }
+    div.uservoice
+    {
+        padding: 30px 0;
+        text-align: center;
+        height: 210px;
+    }
+    ul#player.voice
+    {
+        position: relative;
+        height: 110px;
+        list-style: none;
+        list-style-image: none;
+    }
+    ul#player.voice::before, ul#player.voice::after
+    {
+        content: "“";
+        position: absolute;
+        height: 120px;
+        font-size: 80px;
+        color: #c3c5af;
+        font-family: "Times New Roman", serif;
+    }
+    ul#player.voice::before
+    {
+        top: -20px;
+        left: 10px;
+    }
+    ul#player.voice::after
+    {
+        right: 10px;
+        top: 0;
+        margin-top: -20px;
+    }
+    li.v1, li.v2
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 2.5px 50px;
+        text-align: center;
+        font-size: 24px;
+        color: #555;
+        font-weight: 100;
+        font-family: Georgia,"Times New Roman",serif;
+    }
+    ul#ctrl.user
+    {
+        width: 800px;
+        margin: 50px auto 0;
+    }
+    li.u1.c1, li.u2.c2, li.u3.c3, li.u4.c4
+    {
+        display: block;
+        float: left;
+        width: 200px;
+        text-align: left;
+        line-height: 1.2;
+        opacity: 0.35;
+        cursor: pointer;
+        height: 50px;
+    }
+    .avatar
+    {
+        float: left;
+        margin: -10px 10px 0 0;
+    }
+    .name
+    {
+        font-size: 18px;
+        font-weight: bold;
+        color: #000;
+    }
+    .info1, .info2, .info3, .info4
+    {
+        font-size: 13px;
+        color: #999;
+        height: 14px;
+    }
+    .info1
+    {
+        width: 59px;
+    }
+    .info2
+    {
+        width: 87px;
+    }
+    .info3
+    {
+        width: 60px;
+    }
+    .info4
+    {
+        width: 72px;
+    }
+    div#signup.section
+    {
+        padding: 30px 0 50px;
+        background: #f0f2e7 url(assets/home_signup_bg-fcb2b6dd65b8f634e1f2036123f39b37.jpg) repeat-x 50% 50%;
+        height: 527px;
+    }
+    #signup h3
+    {
+        padding: 30px 0 20px;
+        margin: 0;
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+        color: #41706c;
+        text-shadow: 0px 2px 0px rgba(255,255,255,0,5);
+        font-family: "helvetica neue", helvetica, arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft Yahei", "SimHei", Sans-serif;
+        height: 45px;
+    }
+    .signup-form
+    {
+        width: 300px;
+        padding: 15px 20px;
+        margin: 0 auto 30px;
+        background-color: #fff;
+        border-radius: 4px;
+    }
+    div.form-field
+    {
+        width: 600px;
+    }
+    div.form-itme
+    {
+        margin-bottom: 20px;
+        height: 38px;
+    }
+    .form-field input
+    {
+        float: left;
+        width: 288px;
+        font-size: 16px;
+        padding: 8px 5px;
+        border: 1px solid #ccc;
+        height: 20px;
+        line-height: 16px;
+        box-shadow: inset 0 0 3px rgba(0,0,0,0.1);
+        border-radius: 4px;
+    }
+    div.form-buttons
+    {
+        width: 300px;
+    }
+    p.agree
+    {
+        margin-bottom: 8px;
+        text-align: center;
+        font-size: 12px;
+        height: 18px;
+    }
+    .agree a
+    {
+        color: #4298ba;
+        text-decoration: none;
+        display: block;
+        float: right;
+        padding-left: 5px;
+    }
+    button.btn.btn-submit
+    {
+        width: 300px;
+        line-height: 51px;
+        background: #95b93d;
+        font-size: 20px;
+        font-weight: bold;
+        color: #fff;
+        border: 0;
+        padding: 0;
+        cursor: pointer;
+        background-image: url(assets/home-img-sprite-d2a8e85a251fe8dd8c901705baad1287.png);
+        background-repeat: no-repeat;
+        background-size: 800px auto;
+        background-position: 0 -350px;
+        border-radius: 4px;
+        display: inline-block;
+        text-align: center;
+        opacity: 0.9;
+    }
+    button.btn.btn-submit:hover
+    {
+        background-position: -350px -350px;
+        opacity: 1;
+    }
+    .tips
+    {
+        padding-top: 60px;
+        margin: 0;
+    }
+    .tips-plan, .tips-free
+    {
+        margin-right: 50px;
+        float: left;
+        width: 280px;
+        height: 81px;
+    }
+    .tips div.tips-plan i
+    {
+        background-position: -100px -450px;
+    }
+    .tips div
+    {
+        float: left;
+        width: 280px;
+    }
+    .tips div i
+    {
+        display: block;
+        float: left;
+        width: 70px;
+        height: 70px;
+        padding-right: 10px;
+        background-image: url(assets/home-img-sprite-d2a8e85a251fe8dd8c901705baad1287.png);
+        background-repeat: no-repeat;
+        background-size: 800px auto;
+    }
+    dt
+    {
+        font-size: 18px;
+        width: 280px;
+        height: 27px;
+        font-weight: bold;
+        font-family: "helvetica neue", helvetica, arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft Yahei", "SimHei", Sans-serif;
+        text-align: left;
+    }
+    dd
+    {
+        width: 240px;
+        height: 54px;
+        font-size: 12px;
+        color: #666;
+        text-align: left;
+        line-height: 1.5;
+    }
+    .tips div a
+    {
+        color: #4298ba;
+        text-decoration: none;
+        font-size: 13px;
+    }
+    .tips div.tips-free i
+    {
+        background-position: -200px -450px;
+    }
+    .tips div.tips-safe i
+    {
+        background-position: 0px -450px;
+    }
+    .footer
+    {
+        background: #5b6566;
+        padding: 10px 0 0;
+        height: 318px;
+    }
+    .news
+    {
+        width: 960px;
+        margin: 0 auto;
+        padding: 40px 0 30px;
+        font-family: "Helvetica Neue", Helvetica, Arial;
+        height: 171px;
+    }
+    .blog
+    {
+        float: left;
+        width: 450px;
+        height: 149px;
+    }
+    .blog h3, .news h3, h4
+    {
+        font-family: "helvetica neue", helvetica, arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft Yahei", "SimHei", Sans-serif;
+    }
+    .blog h3
+    {
+        color: #99ac8d;
+        margin: 0;
+    }
+    .news h3
+    {
+        font-size: 15px;
+        line-height: 1;
+    }
+    h4
+    {
+        margin: 0;
+        padding: 7px 0px 0px 0px;
+    }
+    .news h4 a
+    {
+        font-size: 20px;
+        font-weight: bold;
+        color: #fff;
+        text-decoration: none;
+    }
+    .news p
+    {
+        padding: 20px 0 0;
+        font-size: 14px;
+        color: #ddd;
+        margin: 0;
+        line-height: 1.5;
+    }
+    a.more
+    {
+        font-size: 12px;
+        color: #58afce;
+        text-decoration: none;
+        font-family: "Helvetica Neue", Helvetica, Arial;
+        display: block;
+        float: right;
+        padding-right: 75px;
+    }
+    a.more:hover
+    {
+        color: white;
+        text-decoration: underline;
+    }
+    div.contact
+    {
+        margin-left: 730px;
+        line-height: 1.2;
+    }
+    div.contact-others
+    {
+        width: 230px;
+    }
+    address
+    {
+        font-style: italic;
+        line-height: 1.2;
+        width: 230px;
+        height: 171px;
+    }
+    @font-face
+    {
+        font-family: 'FontAwesome';
+        src: url(assets/fontawesome-webfont.woff);
+    }
+    p.tel, p.email, p.weibo
+    {
+        position: relative;
+        padding: 6px 0 14px 42px;
+        font-size: 14px;
+        color: #ddd;
+    }
+
+    p.tel, p.email
+    {
+        width: 188px;
+        height: 37px;
+        display: block;
+    }
+    p.tel em, p.email em, p.weibo em
+    {
+        font-size: 18px;
+        color: #fff;
+        font-style: normal;
+    }
+    i.fa.fa-phone, i.fa.fa-envelope, i.fa.fa-weibo
+    {
+        position: absolute;
+        left: 0;
+        top: 9px;
+        display: block;
+        width: 20px;
+        height: 20px;
+        padding: 7px;
+        background: #ACCCC7;
+        color: #5B6566;
+        font-size: 20px;
+        font-family: FontAwesome;
+        font-style: normal;
+        border-radius: 4px;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 1;
+    }
+    i.fa.fa-phone
+    {
+        padding: 8px 4px 6px 10px;
+    }
+    .fa.fa-phone:before
+    {
+        content: "\f095";
+    }
+    p.tel em a, p.email em a, p.weibo em a
+    {
+        color: #fff;
+        text-decoration: none;
+        line-height: 1.2;
+        display: block;
+    }
+    p.tel em a
+    {
+        width: 111px;
+        height: 20px;
+    }
+    p.tel span, p.email span, p.weibo span
+    {
+        font-size: 13px;
+        color: #ACCCC7;
+    }
+    .fa-envelope:before
+    {
+        content: "\f0e0";
+    }
+    .fa-weibo:before
+    {
+        content: "\f18a";
+    }
+    .info
+    {
+        padding: 20px 0;
+        background: #222222;
+        height: 77px;
+        display: block;
+    }
+    .links
+    {
+        float: left;
+        width: 402px;
+        height: 28px;
+    }
+    .wooyun
+    {
+        float: right;
+        margin-left: 30px;
+        width: 90px;
+    }
+    .copyright
+    {
+        float: right;
+        padding: 5px 0;
+        font-size: 12px;
+        color: #666;
+        width: 380px;
+        display: block;
+    }
+    span.filing
+    {
+        margin-right: 30px;
+        color: #666;
+        font-size: 11px;
+        font-family: "Helvetica Neue", Helvetica, Arial;
+    }
+    .links a
+    {
+        display: block;
+        float: left;
+        margin-right: 30px;
+        padding: 5px 0;
+        font-size: 12px;
+        color: #aaa;
+    }
+    .links a:hover, .copyright a:hover, .wooyun a:hover
+    {
+        text-decoration: underline;
+    }
+    .wooyun a
+    {
+        color: #4298ba;
+        text-decoration: none;
+    }
+
+    .wooyun img
+    {
+        width: 90px;
+        height: 30px;
+    }
+    .copyright a
+    {
+        color: #666;
+        font-family: "Helvetica Neue", Helvetica, Arial;
+        display: block;
+        float: right;
+    }
+    .copyright em
+    {
+        font-style: normal;
+    }
+    </style>
+</head>
+<body>
+    <div class="page" id="page-home">
+        <div class="header">
+            <div class="inr">
+                <h2 class="logo"><a href="/" title="点击回到首页"></a></h2>
+                <ul class="nav">
+                    <li class="home"><a href="https://tower.im/" target="_blank">首页</a></li>
+                    <li class="tour"><a href="https://tower.im/tour" target="_blank">了解详细</a></li>
+                    <li class="plans"><a href="https://tower.im/plans">企业版</a></li>
+                    <li class="customers"><a href="https://tower.im/customers">客户案例</a></li>
+                    <li class="mobile"><a href="https://tower.im/mobile">移动版</a></li>
+                    <li class="help"><a href="https://tower.im/help?utm_source=appsite_home&utm_medium=nav_link_help&utm_campaign=appsite">帮助中心</a></li>
+                    <li class="signup"><a class="one" href="/users/sign_up/?utm_source=appsite_home&utm_medium=nav_link_signup&utm_campaign=appsite">免费注册</a></li>
+                    <li class="signin"><a class="one" tabindex="1" href="/users/sign_in/?utm_source=appsite_home&utm_medium=nav_link_signin&utm_campaign=appsite">登录 &#9992;</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="section" id="intro">
+            <div class="inr">
+                <div class="desc">
+                    <h1>简单，好用的团队协作工具</h1>
+                    <h2>在这里你可以快速处理任务、开展讨论、查看项目进展，随时与你的团队高效协作</h2>
+                    <a class="sightto" href="https://tower.im/users/sign_up/?utm_source=appsite_home&utm_medium=intro_btn_testing&utm_campaign=appsite">开通免费版</a> </div>
+                    <div class="video" title="点击播放的 Tower 的介绍视频"><a href="javascript:;" class="video-preview" data-video-width="960" data-video-height="540">
+                        <img width="565" height="384" src="E:\html3\assets\video-preview-431bdceb1b043aa2f98a22b989b88cc4.png">
+                        <div class="btn-play"></div>
+                    </a></div>
+                </div>
+            </div>
+            <div class="section" id="features">
+                <div class="inr"><a class="featrue1" href="https://tower.im/tour#communication"><i class="one"></i>在线讨论</a> <a class="featrue1" href="https://tower.im/tour#orgnize"><i class="two"></i>任务管理</a> <a class="featrue1" href="https://tower.im/tour#office"><i class="three"></i>团队日程</a> <a class="featrue1" href="https://tower.im/tour#communication"><i class="forth"></i>动态通知</a> <a class="featrue1" href="https://tower.im/tour#communication"><i class="fife"></i>每日动态</a> <a class="featrue1" href="https://tower.im/tour#platform"><i class="six"></i>多平台支持</a> <a class="tour-link" href="/tour">了解详细 ►</a> </div>
+            </div>
+            <div class="section" id="customer">
+                <div class="inr">
+                    <h3 class="h3">超过<em>80,000</em>支团队的选择</h3>
+                    <div class="customers-link"><a href="https://tower.im/customers">看看谁都在用 Tower →</a> </div>
+                    <div class="uservoice">
+                        <ul class="voice" id="player">
+                            <li class="v1 cur" style="display: list-item;">给广大中小创业团队推荐一下这个多人协作工具 Tower ，如果你的团队跨地域的，或者不在一起办公，如果你在一个虚拟团队，那么建议你先免费尝试一下这款工具，又不费电。有无基础均可使用，包教包会，一期不好用的话下期免费。<p></p>
+                            </li>
+                            <li class="v2" style="display: none;">用了 Tower ，让我这样一个每天要管乱七八糟事情布置各种任务然后一扭头自己都忘了哪个优先级高，时常被员工在厕所骂的土老板一下子享受到了比 QQ 和 Excel 更牛逼的团队协作和项目管理方式。更酷的是，这玩意实在是太简单了。<p></p>
+                            </li>
+                        </ul>
+                        <ul class="user" id="ctrl">
+                            <li class="u1 c1 cur">
+                                <img class="avatar" width="60" height="60" src="E:html3/assets/avatar-fengdahui-18c0f0f9367128a4f9b9735292103bb5.png"><span class="name">Fenng</span><br>
+                                <span class="info1">丁香园CTO</span> </li>
+                                <li class="u2 c2">
+                                    <img class="avatar" width="60" height="60" src="E:html3/assets/avatar-joeyyin-5e60d56fc4ad4616b79bd9309de9b4c0.png"><span class="name">Joey Yin</span><br>
+                                    <span class="info4">四海邮创始人</span></li>
+                                    <li class="u3 c3">
+                                        <img class="avatar" width="60" height="60" src="E:html3/assets/avatar-yxshawn-60f8fdd481251c332c1d471c6885d39a.png"><span class="name">肖铁翔</span><br>
+                                        <span class="info2">EUMLab创始人</span><br>
+                                        <span class="info3">独立音乐人</span></li>
+                                        <li class="u4 c4">
+                                            <img class="avatar" width="60" height="60" src="E:html3/assets/avatar-guoziwei-80a6af2b4dc71f46b1f153814c4cd4bd.png"><span class="name">纯银</span><br>
+                                            <span class="info4">蝉游记创始人</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section" id="signup">
+                                <div class="inr">
+                                    <h3>完全免费，现在就注册</h3>
+                                    <div class="signup-form">
+                                        <form class="form" action="/users/sign_up" method="post" data-remote="true" novalidate>
+                                            <div class="form-itme">
+                                                <div class="form-field">
+                                                    <input class="nickname" name="nickname" type="text" placeholder="填写昵称" autocomplete="off" data-validate="requirted;length:1,255" data-validate-msg="请填写你的昵称">
+                                                </div>
+                                            </div>
+                                            <div class="form-itme">
+                                                <div class="form-field">
+                                                    <input class="email" name="email" type="email" placeholder="填写邮箱，例如：10001@qq.com" autocomplete="off" data-validate="requirted;email" data-validate-msg="请填写你的常用邮箱">
+                                                </div>
+                                            </div>
+                                            <div class="form-itme">
+                                                <div class="form-field">
+                                                    <input class="password" name="password" type="password" placeholder="设置密码，至少包含6位字符" autocomplete="off" data-validate="requirted;length:6" data-validate-msg="请设置一个登陆密码">
+                                                </div>
+                                            </div>
+                                            <div class="form-buttons">
+                                                <p class="agree">点击注册表示你已阅读并同意 <a href="/agreement" target="_blank">《Tower 服务条款》</a> </p>
+                                                <button class="btn btn-submit" type="submit" data-disable-with="正在注册...">免费注册</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <dl class="tips">
+                                        <div class="tips-plan"><i></i>
+                                            <dt>企业版</dt>
+                                            <dd>每月只需要很少的费用，即可升级到更加强大的企业版 Tower.<br>
+                                                <a href="https://tower.im/plans">查看企业版方案和价格</a></dd>
+                                            </div>
+                                            <div class="tips-free"><i></i>
+                                                <dt>公益计划</dt>
+                                                <dd>免费为公益组织服务，或者支持学生团队，让我们的工作更有意义。<br>
+                                                    <a href="https://tower.im/free.html" target="_blank">了解 Tower 公益计划</a></dd>
+                                                </div>
+                                                <div class="tips-safe"><i></i>
+                                                    <dt>数据安全</dt>
+                                                    <dd>保护你的数据万无一失，是我们的责任，请你放心。<br>
+                                                        <a href="http://blog.mycolorway.com/2013/03/05/how_we_protect_tower/" title="前往彩程设计博客查看" target="_blank">了解《我们是怎么保护Tower的》</a></dd>
+                                                    </div>
+                                                </dl>
+                                            </div>
+                                        </div>
+                                        <div class="footer">
+                                            <div class="news">
+                                                <div class="blog">
+                                                    <h3>彩程博科</h3>
+                                                    <h4><a href="http://blog.mycolorway.com/2013/03/05/how_we_protect_tower/">我们是怎么保护 Tower 的</a></h4>
+                                                    <p>最近，在线软件服务“日志宝”，上线7个月就被360收购，引发科技媒体的热议，没想到在国内一贯被认为不靠谱的在线软件服务（即SaaS），也能有春天。业余散布小道消息的冯大辉（@Fenng）倒是先知先觉，日志宝一推出就觉得有戏，还在自己的微博作了推荐。<a class="more" href="http://blog.mycolorway.com/2013/03/05/how_we_protect_tower/">阅读全文 →</a></p>
+                                                </div>
+                                                <div class="contact">
+                                                    <div class="contact-other">
+                                                        <address>
+                                                            <p class="tel"><i class="fa fa-phone"></i><em><a href="tel:4008067077">4008 067 077</a></em><span>周一至周五 9:00-18:00</span></p>
+                                                            <p class="email"><i class="fa fa-envelope"></i><em><a href="mailto:support@tower.im?subject=Tower购买咨询(via#Home/Footer)" target="_blank" title="点击发送邮件给我们">support@tower.im</a></em><span>发送意见反馈</span></p>
+                                                            <p class="weibo"><i class="fa fa-weibo"></i><em><a href="http://weibo.com/towerim" target="_blank" title="点击关注我们的新浪微博">@Tower-彩程</a></em><span>关注最新动态</span></p>
+                                                        </address>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="info">
+                                                <div class="inr">
+                                                    <div class="links"><a href="https://tower.im/about_us" target="_blank">关于我们</a> <a href="https://tower.im/contact_us" target="_blank">联系我们</a> <a href="https://tower.im/agreement" target="_blank">服务条款</a> <a href="https://tower.im/help">帮助中心</a> <a href="https://tower.im/server-status" target="_blank">服务器状态</a></div>
+                                                    <div class="wooyun"><a href="http://ce.wooyun.org/login" target="_blank">
+                                                        <img src="E:html3/assets/wooyun-ddd6ec3c69b76e0027b40ca6f64b29b0.png" alt="乌云众测认证"></a> </div>
+                                                        <div class="copyright"><span class="filing"><em title="中华人民共和国增值电信业务经营许可证">川B2-20130052</em>， <em title="中华人民共和国互联网信息服务备案">蜀ICP备12019256号-5</em> </span>© <a href="http://mycolorway.com/" target="_blank">Mycolorway Design.</a> </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </body>
+                                    </html>
