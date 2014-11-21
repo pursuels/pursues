@@ -140,11 +140,12 @@
         height: 30px;
         padding: 12px 0px 12px 0px;
     }
-    .home, .tour, .plans, .customers, .mobile, .help, .signup, .signin
+    .logo a:hover{opacity: 0.8;}
+    .home, .tour, .plans, .customers, .mobile, .help,.return
     {
         display: block;
     }
-    .home, .plans, .customers, .mobile, .help
+    .home, .plans, .customers, .mobile, .help,.return
     {
         color: #57786f;
         position: absolute;
@@ -162,6 +163,7 @@
         top: 25px;
         left: 410px;
     }
+    .home a:hover{opacity: 0.8;}
     .tour
     {
         color: #E6E6FA;
@@ -169,43 +171,37 @@
         top: 25px;
         left: 480px;
     }
+    .tour a:hover{opacity: 0.8;}
     .plans
     {
         top: 25px;
         left: 580px;
     }
+    .plans a:hover{opacity: 0.8;}
     .customers
     {
         top: 25px;
         left: 660px;
     }
+    .customers a:hover{opacity: 0.8;}
     .mobile
     {
         top: 25px;
         left: 760px;
     }
+    .mobile a:hover{opacity: 0.8;}
     .help
     {
         top: 25px;
         left: 840px;
     }
-    .signup, .signin
-    {
-        position: absolute;
-        top: 15px;
-        border-radius: 5px;
-        padding: 7px 15px;
+    .help a:hover{opacity: 0.8;}
+    .return{margin-left: 125px;
+        top: 20px;
+       left: 900px;
     }
-    .signup
-    {
-        left: 980px;
-        background: #aad200;
-    }
-    .signin
-    {
-        left: 1090px;
-        background: #a7bbb6;
-    }
+    .return a{display: block;padding: 5px 15px;color: #57786f;height: 24px;font-family: "Helvetica Neue", Helvetica, Arial;}
+     .return a:hover{opacity: 0.8;}
     .desc
     {
         width: 400px;
@@ -854,8 +850,9 @@
                     <li class="customers"><a href="https://tower.im/customers">客户案例</a></li>
                     <li class="mobile"><a href="https://tower.im/mobile">移动版</a></li>
                     <li class="help"><a href="https://tower.im/help?utm_source=appsite_home&utm_medium=nav_link_help&utm_campaign=appsite">帮助中心</a></li>
-                    <li class="signup"><a class="one" href="/users/sign_up/?utm_source=appsite_home&utm_medium=nav_link_signup&utm_campaign=appsite">免费注册</a></li>
-                    <li class="signin"><a class="one" tabindex="1" href="/users/sign_in/?utm_source=appsite_home&utm_medium=nav_link_signin&utm_campaign=appsite">登录 &#9992;</a></li>
+                    <li class="return">
+                        <a href="/launchpad" title="进入 Tower →">进入 Tower →</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -866,7 +863,7 @@
                     <h2>在这里你可以快速处理任务、开展讨论、查看项目进展，随时与你的团队高效协作</h2>
                     <a class="sightto" href="https://tower.im/users/sign_up/?utm_source=appsite_home&utm_medium=intro_btn_testing&utm_campaign=appsite">开通免费版</a> </div>
                     <div class="video" title="点击播放的 Tower 的介绍视频"><a href="javascript:;" class="video-preview" data-video-width="960" data-video-height="540">
-                        <img width="565" height="384" src="E:\html3\assets\video-preview-431bdceb1b043aa2f98a22b989b88cc4.png">
+                        <img width="565" height="384" src="assets\video-preview-431bdceb1b043aa2f98a22b989b88cc4.png">
                         <div class="btn-play"></div>
                     </a></div>
                 </div>
@@ -887,17 +884,17 @@
                         </ul>
                         <ul class="user" id="ctrl">
                             <li class="u1 c1 cur">
-                                <img class="avatar" width="60" height="60" src="E:html3/assets/avatar-fengdahui-18c0f0f9367128a4f9b9735292103bb5.png"><span class="name">Fenng</span><br>
+                                <img class="avatar" width="60" height="60" src="assets/avatar-fengdahui-18c0f0f9367128a4f9b9735292103bb5.png"><span class="name">Fenng</span><br>
                                 <span class="info1">丁香园CTO</span> </li>
                                 <li class="u2 c2">
-                                    <img class="avatar" width="60" height="60" src="E:html3/assets/avatar-joeyyin-5e60d56fc4ad4616b79bd9309de9b4c0.png"><span class="name">Joey Yin</span><br>
+                                    <img class="avatar" width="60" height="60" src="assets/avatar-joeyyin-5e60d56fc4ad4616b79bd9309de9b4c0.png"><span class="name">Joey Yin</span><br>
                                     <span class="info4">四海邮创始人</span></li>
                                     <li class="u3 c3">
-                                        <img class="avatar" width="60" height="60" src="E:html3/assets/avatar-yxshawn-60f8fdd481251c332c1d471c6885d39a.png"><span class="name">肖铁翔</span><br>
+                                        <img class="avatar" width="60" height="60" src="assets/avatar-yxshawn-60f8fdd481251c332c1d471c6885d39a.png"><span class="name">肖铁翔</span><br>
                                         <span class="info2">EUMLab创始人</span><br>
                                         <span class="info3">独立音乐人</span></li>
                                         <li class="u4 c4">
-                                            <img class="avatar" width="60" height="60" src="E:html3/assets/avatar-guoziwei-80a6af2b4dc71f46b1f153814c4cd4bd.png"><span class="name">纯银</span><br>
+                                            <img class="avatar" width="60" height="60" src="assets/avatar-guoziwei-80a6af2b4dc71f46b1f153814c4cd4bd.png"><span class="name">纯银</span><br>
                                             <span class="info4">蝉游记创始人</span></li>
                                         </ul>
                                     </div>
@@ -969,7 +966,7 @@
                                                 <div class="inr">
                                                     <div class="links"><a href="https://tower.im/about_us" target="_blank">关于我们</a> <a href="https://tower.im/contact_us" target="_blank">联系我们</a> <a href="https://tower.im/agreement" target="_blank">服务条款</a> <a href="https://tower.im/help">帮助中心</a> <a href="https://tower.im/server-status" target="_blank">服务器状态</a></div>
                                                     <div class="wooyun"><a href="http://ce.wooyun.org/login" target="_blank">
-                                                        <img src="E:html3/assets/wooyun-ddd6ec3c69b76e0027b40ca6f64b29b0.png" alt="乌云众测认证"></a> </div>
+                                                        <img src="assets/wooyun-ddd6ec3c69b76e0027b40ca6f64b29b0.png" alt="乌云众测认证"></a> </div>
                                                         <div class="copyright"><span class="filing"><em title="中华人民共和国增值电信业务经营许可证">川B2-20130052</em>， <em title="中华人民共和国互联网信息服务备案">蜀ICP备12019256号-5</em> </span>© <a href="http://mycolorway.com/" target="_blank">Mycolorway Design.</a> </div>
                                                     </div>
                                                 </div>
